@@ -7,7 +7,7 @@ y = "aio_hevN47NjCk7PEJ5CwwsDk5AGTICd"  #ADAFRUIT_IO_KE
 
 
 from telegram.ext import Updater,CommandHandler
-import requests  # Getting the data from the cloud
+import requests  # Getting the data from the cloud 
  
 
 def get_url(): 
