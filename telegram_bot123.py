@@ -10,7 +10,7 @@ from telegram.ext import Updater,CommandHandler
 import requests  # Getting the data from the cloud
 
 
-def get_url():
+def get_url(): 
     contents = requests.get('https://random.dog/woof.json').json()
     url = contents['url']
     return url
