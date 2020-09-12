@@ -1,29 +1,19 @@
 !pip install adafruit-io
-
 import os
 x = "shivaraj73" #ADAFRUIT_IO_USERNAME
 y = "aio_hevN47NjCk7PEJ5CwwsDk5AGTICd"  #ADAFRUIT_IO_KEY
-
 from Adafruit_IO import Client, Feed
 aio = Client(x,y)
-
 # Create a feed
 new = Feed(name='telebot')  # Feed name is given
-
 result = aio.create_feed(new)
-
-
 !pip install python-telegram-bot
-
 from telegram.ext import Updater,CommandHandler
 import requests  # Getting the data from the cloud
-
-
 def get_url():
     contents = requests.get('https://random.dog/woof.json').json()
     url = contents['url']
     return url
-
 def on(bot,update):
     url = get_url()
     chat_id = update.message.chat_id
